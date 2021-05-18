@@ -2,7 +2,7 @@ package logger
 
 import (
 	"fmt"
-	"mr-chelyshkin/go-scrumble/pkg/errors"
+	"github.com/mr-chelyshkin/go-scrumble/pkg/errors"
 )
 
 /*
