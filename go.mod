@@ -1,4 +1,4 @@
-module github.com/mr-chelyshkin/go-scrumble
+module go-scrumble
 
 go 1.15
 

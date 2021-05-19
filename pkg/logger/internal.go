@@ -2,8 +2,8 @@ package logger
 
 import (
 	"fmt"
-	"github.com/mr-chelyshkin/go-scrumble/pkg/errors"
 	"github.com/natefinch/lumberjack"
+	"go-scrumble/pkg/errors"
 	"go.uber.org/zap/zapcore"
 	"os"
 	"path"
