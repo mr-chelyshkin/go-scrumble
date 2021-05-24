@@ -67,6 +67,9 @@ func prepareConfig(config *Config) Config {
 	if config.Compress {
 		loggerConfig.Compress = config.Compress
 	}
+	if config.TimeFormat != "" {
+		loggerConfig.TimeFormat = config.TimeFormat
+	}
 
 	return loggerConfig
 }
