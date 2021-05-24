@@ -49,18 +49,22 @@ func prepareConfig(config *Config) Config {
 		return loggerConfig
 	}
 
-	switch {
-	case config.FileName != "":
+	if  config.FileName != "" {
 		loggerConfig.FileName = config.FileName
-	case config.FileDirectory != "":
+	}
+	if config.FileDirectory != "" {
 		loggerConfig.FileDirectory = config.FileDirectory
-	case config.FileSize != 0:
-		loggerConfig.FileSize = config.FileSize
-	case config.FileAge != 0:
+	}
+	if config.FileSize != 0 {
 		loggerConfig.FileAge = config.FileAge
-	case config.FileBackups != 0:
+	}
+	if config.FileAge != 0 {
+		loggerConfig.FileAge = config.FileAge
+	}
+	if config.FileBackups != 0 {
 		loggerConfig.FileBackups = config.FileBackups
-	case config.Compress:
+	}
+	if config.Compress {
 		loggerConfig.Compress = config.Compress
 	}
 
@@ -89,9 +93,9 @@ func isWritable(path string) (bool, error) {
 		return false, errors.Core.NewF(err, statErr)
 	}
 
-	if uint32(os.Geteuid()) != stat.Uid {
-		return false, errors.Core.New(fmt.Errorf(permDirErr))
-	}
+	//if uint32(os.Geteuid()) != stat.Uid {
+	//	return false, errors.Core.New(fmt.Errorf(permDirErr))
+	//}
 
 	return true, nil
 }
