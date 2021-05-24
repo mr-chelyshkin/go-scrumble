@@ -1,7 +1,7 @@
 package logger
 
 import (
-	"go-scrumble/pkg/errors"
+	"github.com/mr-chelyshkin/go-scrumble/pkg/errors"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 )
