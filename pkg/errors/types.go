@@ -74,7 +74,7 @@ func (e errorType) NewF(original error, args ...interface{}) errorBase {
 /*
 	Create scrumble.errors.errorBase object from income string and args, based from selected error type
 */
-func (e errorType) NewSA(original string, args ...interface{}) errorBase {
+func (e errorType) NewSF(original string, args ...interface{}) errorBase {
 	trace := fmt.Errorf("")
 	for _, arg := range args {
 		trace = fmt.Errorf("%v %w", arg, trace)
